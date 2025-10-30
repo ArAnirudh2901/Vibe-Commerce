@@ -154,29 +154,29 @@ Base URL: `http://localhost:5001/api`
 ## Preview Screenshots for Large Screen
 
 - Landing page 
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Landing-Page.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Landing-Page.jpg)
 - Products listing
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Products.jpg)`
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Products2.jpg)`
-- Cart interactions (add, update quantity, remove)
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Card.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Products.jpg)
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Products2.jpg)
+- Cart preview
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Card.jpg)
 - Checkout receipt
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-checkout.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-checkout.jpg)
 - Order Confirmation with Order Number
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-order.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-order.jpg)
  
  ## Preview Screenshots for Mobile Responsive Mode
 
 - Landing page 
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-landing-page.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-landing-page.jpg)
 - Products listing
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-products-section.jpg)`
-- Cart interactions (add, update quantity, remove)
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-cart-preview.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-products-section.jpg)
+- Cart preview
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-cart-preview.jpg)
 - Checkout receipt
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-checkout.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-checkout.jpg)
 - Order Confirmation with Order Number
-  - `![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-order.jpg)`
+  - ![image alt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-order.jpg)
  
 
 ## Common Issues & Fixes 
