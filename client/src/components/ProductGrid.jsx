@@ -61,7 +61,7 @@ function ProductGrid({ products, cartItems = [], onCartUpdate }) {
         <p className="text-gray-400">{products.length} items available</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+      <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-3 sm:gap-5">
         {products.map((product, idx) => {
           const item = getCartItem(product._id);
           const qty = item?.quantity || 0;
@@ -89,25 +89,25 @@ function ProductGrid({ products, cartItems = [], onCartUpdate }) {
               />
             </div>
             
-            <div className="p-3 flex-1 flex flex-col">
-              <h3 className="text-base font-semibold text-white mb-1 truncate" title={product.name}>{product.name}</h3>
-              <p className="text-xl font-bold text-gray-300 mb-3">${product.price}</p>
+            <div className="p-2 sm:p-3 flex-1 flex flex-col">
+              <h3 className="text-sm sm:text-base font-semibold text-white mb-1 truncate" title={product.name}>{product.name}</h3>
+              <p className="text-base sm:text-xl font-bold text-gray-300 mb-3">${product.price}</p>
               {qty > 0 ? (
-                <div className="mt-auto w-full flex items-center justify-between bg-white text-black rounded-lg overflow-hidden text-sm">
+                <div className="mt-auto w-full flex items-center justify-between bg-white text-black rounded-lg overflow-hidden text-xs sm:text-sm">
                   <button
                     aria-label="Decrease quantity"
                     disabled={isBusy}
                     onClick={() => handleDecrement(product._id)}
-                    className="py-1.5 px-3 hover:bg-gray-200 disabled:opacity-60"
+                    className="py-1 px-2 sm:py-1.5 sm:px-3 hover:bg-gray-200 disabled:opacity-60"
                   >
                     <Minus className="h-4 w-4" />
                   </button>
-                  <span className="py-1.5 px-2 font-semibold select-none">{qty}</span>
+                  <span className="py-1 px-2 sm:py-1.5 sm:px-2 font-semibold select-none">{qty}</span>
                   <button
                     aria-label="Increase quantity"
                     disabled={isBusy || qty >= 20}
                     onClick={() => handleIncrement(product._id)}
-                    className="py-1.5 px-3 hover:bg-gray-200 disabled:opacity-60"
+                    className="py-1 px-2 sm:py-1.5 sm:px-3 hover:bg-gray-200 disabled:opacity-60"
                   >
                     <Plus className="h-4 w-4" />
                   </button>
@@ -116,7 +116,7 @@ function ProductGrid({ products, cartItems = [], onCartUpdate }) {
                 <button
                   onClick={() => handleAddToCart(product._id)}
                   disabled={isBusy}
-                  className="mt-auto w-full bg-white text-black py-1.5 px-3 rounded-[6px] hover:bg-gray-200 transition-colors flex items-center justify-center space-x-2 disabled:opacity-60 text-sm"
+                  className="mt-auto w-full bg-white text-black py-1 px-2 sm:py-1.5 sm:px-3 rounded-[6px] hover:bg-gray-200 transition-colors flex items-center justify-center space-x-2 disabled:opacity-60 text-xs sm:text-sm"
                 >
                   <Plus className="h-4 w-4" />
                   <span>Add to Cart</span>
