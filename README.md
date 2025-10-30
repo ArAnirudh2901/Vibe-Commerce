@@ -28,6 +28,16 @@ Note: The root `package.json` scripts reference `backend` and `frontend`. In thi
 - Frontend: `React` (Vite), `TailwindCSS`, `Axios`
 - Data seeding: `Fake Store API` with fallback local seeding
 
+## Features 
+ 
+ - **Product Seeding**: Automatically fetches products from Fake Store API on startup 
+ - **Fallback Data**: Uses Unsplash placeholder images if API is unavailable 
+ - **Responsive Design**: Mobile-first UI with TailwindCSS 
+ - **Dark Theme**: Clean, modern dark UI 
+ - **Cart Management**: Add, update quantity, remove items 
+ - **Mock Checkout**: Receipt generation with timestamp 
+ - **Error Handling**: Centralized error middleware 
+
 ## Prerequisites
 
 - `Node.js >= 20`
@@ -141,51 +151,74 @@ Base URL: `http://localhost:5001/api`
 - Cart view with quantity update, remove, and checkout modal
 - Clean dark UI using TailwindCSS and Lucide icons
 
-## Setup Screenshots
+## Preview Screenshots
 
-Place your screenshots in `docs/screenshots/` and they will render below. Suggested captures:
+Place your preview screenshots in `docs/screenshots/`. Suggested flows:
 
-- Install dependencies at root
-  - `![Install - root](docs/screenshots/install-root.png)`
-- Install dependencies in `server`
-  - `![Install - server](docs/screenshots/install-server.png)`
-- Install dependencies in `client`
-  - `![Install - client](docs/screenshots/install-client.png)`
-- Backend running on `5001`
-  - `![Server running](docs/screenshots/server-running.png)`
-- Frontend running on `5173`
-  - `![Client running](docs/screenshots/client-running.png)`
-- UI: Home / Products / Cart
+- Home page
   - `![Home](docs/screenshots/ui-home.png)`
+- Products listing
   - `![Products](docs/screenshots/ui-products.png)`
+- Cart interactions (add, update quantity, remove)
   - `![Cart](docs/screenshots/ui-cart.png)`
 - Checkout receipt
   - `![Checkout receipt](docs/screenshots/checkout-receipt.png)`
-- Postman: `GET /api/products`
-  - `![API products](docs/screenshots/postman-products.png)`
+- Dark mode toggle
+  - `![Dark mode](docs/screenshots/ui-dark-mode.png)`
+- Mobile responsive view
+  - `![Mobile](docs/screenshots/ui-mobile.png)`
 
 Tips for capturing:
 
-- Use terminal screenshots that show `Server running on port 5001` and Vite’s `Local: http://localhost:5173`.
-- Include one screenshot per UI view for clarity.
+- Use consistent browser window size (e.g., 1920x1080) and clear contrast.
+- Include key interactions (hover, add-to-cart, update quantity, checkout success).
+- Use browser DevTools to capture responsive views.
 
-## Common Issues & Fixes
+ 
 
-- Root scripts reference `backend/frontend` but directories are `server/client`.
-  - Use the commands in Quick Start or update root scripts as shown.
-- MongoDB not running:
-  - Ensure `mongod` is running locally and `MONGODB_URI` is correct.
-- CORS errors:
-  - Backend enables CORS (`app.use(cors())`). Ensure you’re calling `http://localhost:5001/api`.
-- Invalid `productId` on `POST /cart`:
-  - Must be a valid MongoDB ObjectId referring to an existing Product.
+## Common Issues & Fixes 
 
-## Development Notes
+### Root scripts reference `backend/frontend` but directories are `server/client` 
+- Use the commands in Quick Start or update root scripts as shown above 
 
-- Error handling is centralized via `middleware/errorHandler.js` and `notFound`.
-- Authentication uses JWT (header `x-auth-token`). `JWT_SECRET` can be provided via `.env`.
-- Frontend API base is in `client/src/services/api.js`. Adjust if you change backend port.
+### MongoDB not running 
+- Ensure `mongod` is running locally 
+- Verify `MONGODB_URI` in `server/.env` is correct 
+- Check MongoDB connection logs in server terminal 
+
+### CORS errors 
+- Backend enables CORS via `app.use(cors())` 
+- Ensure frontend calls `http://localhost:5001/api` 
+- Check `client/src/services/api.js` for correct base URL 
+
+### Invalid `productId` on POST /cart 
+- Must be a valid MongoDB ObjectId 
+- Product must exist in database 
+- Check seeding completed successfully 
+
+### Port already in use 
+- Change `PORT` in `server/.env` 
+- Update frontend API base URL in `client/src/services/api.js` 
+- Kill existing processes: `lsof -ti:5001 | xargs kill -9` (Mac/Linux) 
+
+## Development Notes 
+
+- Error handling centralized via `middleware/errorHandler.js` 
+- Authentication uses JWT (header `x-auth-token`) 
+- Frontend API configuration in `client/src/services/api.js` 
+- Product seeding logic in `server/services/fakeStoreApi.js` 
+- Cart state managed in React `App.jsx` component 
+
+## Technology Highlights 
+
+- **React 19**: Latest features including improved hooks and performance 
+- **Vite**: Lightning-fast HMR and build times 
+- **TailwindCSS**: Utility-first styling with dark theme 
+- **MongoDB**: NoSQL database with Mongoose ODM 
+- **Express**: Minimal and flexible Node.js web framework 
 
 ## License
 
 This project is for learning and demo purposes.
+
+---
