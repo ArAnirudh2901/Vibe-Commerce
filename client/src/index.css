@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animated white border that draws clockwise on hover */
+.btn-border-draw {
+  position: relative;
+  background: #000;
+  color: #fff;
+  border-radius: 0.5rem; /* matches rounded-lg */
+  overflow: hidden; /* keep the stroke within the rounded corners */
+}
+
+.btn-border-draw > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* allow button interaction */
+}
+
+.btn-border-draw > svg rect {
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-dasharray: 100;   /* matches pathLength below */
+  stroke-dashoffset: 100;  /* start fully hidden */
+  transition: stroke-dashoffset 0.8s linear, opacity 0.2s ease;
+}
+
+.btn-border-draw:hover > svg rect,
+.btn-border-draw:focus-visible > svg rect {
+  stroke-dashoffset: 0;    /* draw clockwise */
+}
+
+.btn-border-draw:disabled > svg rect {
+  opacity: 0.25;
+  stroke-dashoffset: 100;  /* keep hidden when disabled */
+}
+
+/* Modern rotating border that fills clockwise using a conic-gradient */
+@property --p {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+.btn-border-rotate {
+  --p: 0; /* progress from 0 to 1 */
+  --border-size: 2px;
+  --start-angle: -0.25turn; /* start at top; change to rotate start */
+  position: relative;
+  background: #000;
+  color: #fff;
+  border-radius: 0.5rem; /* follow rounded-lg */
+  transition: color 0.2s ease;
+  isolation: isolate; /* ensure pseudo sits below content */
+}
+
+.btn-border-rotate:hover,
+.btn-border-rotate:focus-visible {
+  --p: 1;
+}
+
+.btn-border-rotate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: var(--border-size);
+  border-radius: inherit;
+  background: conic-gradient(from var(--start-angle), #fff calc(var(--p) * 1turn), transparent 0);
+  /* Create a rectangular ring by punching out the inner area */
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  transition: --p 0.85s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.btn-border-rotate > * {
+  position: relative;
+  z-index: 1; /* keep content above animated border */
+}
+
+.btn-border-rotate:disabled::before {
+  opacity: 0.35;
+}
