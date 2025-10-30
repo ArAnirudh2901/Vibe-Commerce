@@ -1,4 +1,4 @@
-# Mock E‑Commerce Cart v1
+# Mock E‑Commerce Cart 
 
 A minimal full‑stack e‑commerce cart example with an Express + MongoDB backend and a Vite + React frontend. It seeds products from the Fake Store API (with graceful fallback) and provides a simple cart and checkout flow.
 
