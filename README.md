@@ -18,7 +18,6 @@ mock-e-commerce_cart-v1/
 │   ├── index.html
 │   └── vite.config.js
 ├── package.json       # Root scripts (see Note below)
-└── .qodo/             # IDE workflow metadata
 ```
 
 Note: The root `package.json` scripts reference `backend` and `frontend`. In this project the directories are named `server` and `client`. Use the commands below, or update the root scripts to match.
