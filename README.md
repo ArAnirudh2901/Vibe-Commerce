@@ -31,7 +31,7 @@ Note: The root `package.json` scripts reference `backend` and `frontend`. In thi
 
 ## Prerequisites
 
-- `Node.js >= 16`
+- `Node.js >= 20`
 - `npm` (or `pnpm`/`yarn` if you prefer)
 - A local MongoDB instance running at `mongodb://localhost:27017/vibe-commerce`
 
