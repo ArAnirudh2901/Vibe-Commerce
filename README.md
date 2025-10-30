@@ -151,29 +151,32 @@ Base URL: `http://localhost:5001/api`
 - Cart view with quantity update, remove, and checkout modal
 - Clean dark UI using TailwindCSS and Lucide icons
 
-## Preview Screenshots
+## Preview Screenshots for Large Screen
 
-Place your preview screenshots in `docs/screenshots/`. Suggested flows:
-
-- Home page
-  - `![Home](docs/screenshots/ui-home.png)`
+- Landing page 
+  - `![Home](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Landing-Page.jpg)`
 - Products listing
-  - `![Products](docs/screenshots/ui-products.png)`
+  - `![Products](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Products.jpg)`
+  - `![Products](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Products2.jpg)`
 - Cart interactions (add, update quantity, remove)
-  - `![Cart](docs/screenshots/ui-cart.png)`
+  - `![Cart](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-Card.jpg)`
 - Checkout receipt
-  - `![Checkout receipt](docs/screenshots/checkout-receipt.png)`
-- Dark mode toggle
-  - `![Dark mode](docs/screenshots/ui-dark-mode.png)`
-- Mobile responsive view
-  - `![Mobile](docs/screenshots/ui-mobile.png)`
+  - `![Checkout receipt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-checkout.jpg)`
+- Order Confirmation with Order Number
+  - `![Checkout receipt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/PC-order.jpg)`
+ 
+ ## Preview Screenshots for Mobile Responsive Mode
 
-Tips for capturing:
-
-- Use consistent browser window size (e.g., 1920x1080) and clear contrast.
-- Include key interactions (hover, add-to-cart, update quantity, checkout success).
-- Use browser DevTools to capture responsive views.
-
+- Landing page 
+  - `![Home](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-landing-page.jpg)`
+- Products listing
+  - `![Products](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-products-section.jpg)`
+- Cart interactions (add, update quantity, remove)
+  - `![Cart](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-cart-preview.jpg)`
+- Checkout receipt
+  - `![Checkout receipt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-checkout.jpg)`
+- Order Confirmation with Order Number
+  - `![Checkout receipt](https://github.com/ArAnirudh2901/Vibe-Commerce/blob/16f181d8ed8b5a383e4eea6a62ac37f6da781a2f/Mobile-order.jpg)`
  
 
 ## Common Issues & Fixes 
